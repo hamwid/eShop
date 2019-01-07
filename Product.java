@@ -20,4 +20,7 @@ public class Product {
     setProducer(inputProducer);
     setPrice(inputPrice);
   }
+  public void print(){
+    System.out.println(name + " " + producer + ", " + price + " kr");
+  }
 }
