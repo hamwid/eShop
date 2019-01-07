@@ -12,13 +12,13 @@ public class Deliveries {
     d.createEntry(p);
     queuedDeliveries.add(d);
   }
-  public ArrayList<Purchase> getCompleted(){
+  public ArrayList<Delivery> getCompleted(){
     return completedDeliveries;
   }
-  public ArrayList<Purchase> getongoing(){
+  public ArrayList<Delivery> getongoing(){
     return ongoingDeliveries;
   }
-  public ArrayList<Purchase> getQueued(){
+  public ArrayList<Delivery> getQueued(){
     return queuedDeliveries;
   }
 }
