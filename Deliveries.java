@@ -12,6 +12,16 @@ public class Deliveries {
     d.createEntry(p);
     queuedDeliveries.add(d);
   }
+  public void sendEntry(int i){
+    queuedDeliveries.get(i).setOngoing();
+    ongoingDeliveries.add(queuedDeliveries.get(i));
+    queuedDeliveries.remove(i);
+  }
+  public void completeEntry(int i){
+    queuedDeliveries.get(i).setCompleted();
+    completedDeliveries.add(ongoingDeliveries.get(i));
+    ongoingDeliveries.remove(i);
+  }
   public ArrayList<Delivery> getCompleted(){
     return completedDeliveries;
   }
