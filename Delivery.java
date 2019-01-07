@@ -10,4 +10,14 @@ public class Delivery {
     queued = true;
     completed = false;
   }
+  public void print(){
+    purchase.print();
+    if(completed){
+      System.out.println("Completed!");
+    } else if(queued){
+      System.out.println("Queued!");
+    } else {
+      System.out.println("Error!");
+    }
+  }
 }
