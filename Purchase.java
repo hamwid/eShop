@@ -8,4 +8,8 @@ public class Purchase {
     customer = c;
     product = p;
   }
+  public void print(){
+    customer.print();
+    product.print();
+  }
 }
