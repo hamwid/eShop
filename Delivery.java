@@ -1,6 +1,6 @@
 //Delivery.java
 
-public class Purchase {
+public class Delivery {
   public Purchase purchase;
   public boolean queued;
   public boolean completed;
