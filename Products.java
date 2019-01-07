@@ -9,7 +9,7 @@ public class Products {
                        double price){
     Product p = new Product();
     p.createEntry(name, producer, price);
-    
+    productList.add(p);
   }
   public ArrayList<Product> getEntries(){
     return productList;

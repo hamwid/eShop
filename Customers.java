@@ -9,6 +9,7 @@ public class Customers {
                        String address,   String number){
     Customer c = new Customer();
     c.createEntry(firstname, lastname, address, number);
+    customerList.add(c);
   }
   public ArrayList<Customer> getEntries(){
     return customerList;
