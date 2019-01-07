@@ -25,4 +25,9 @@ public class Customer {
     setAddress(inputAddress);
     setNumber(inputNumber);
   }
+  public void print(){
+    System.out.println(firstName + " " + lastName + ", " +
+                       address   + " " + number);
+  }
+
 }
