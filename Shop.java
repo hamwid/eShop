@@ -1,26 +1,36 @@
 //Shop.java
 
 public class Shop {
-  public static void main(String[] args){
-    Customers cList = new Customers();
-    cList.addEntry("Hampus", "Widell", "HomeRoad", "0701");
-    cList.addEntry("Anna",   "Bell",   "MyStreet", "0704");
-    Products pList  = new Products();
-    pList.addEntry("Bike: Bounce", "Peak", 1500);
-    pList.addEntry("Bike: Slim",   "Peak", 2500);
+  private Customers cList = new Customers();
+  private Products pList  = new Products();
 
-    for(int i=0;i<cList.getEntries().size();i++){
+  public void createCustomer(String firstName, String lastName,
+                             String address, String number){
+    cList.addEntry(firstName, lastName, address, number);
+  }
+  public void createProduct(String name, String producer, double price){
+    pList.addEntry(name, producer, price);
+  }
+
+  public static void main(String[] args){
+    Shop eShop = new Shop();
+    eShop.createCustomer("Hampus", "Widell", "HomeRoad", "0701");
+    eShop.createCustomer("Anna",   "Bell",   "MyStreet", "0704");
+    eShop.createProduct("Bike: Bounce", "Peak", 1500);
+    eShop.createProduct("Bike: Slim",   "Peak", 2500);
+
+    for(int i=0;i<eShop.cList.getEntries().size();i++){
       System.out.println(
-          "Name: "+ cList.getEntries().get(i).firstName + " " +
-                    cList.getEntries().get(i).lastName + "\n" +
-          "Address: " + cList.getEntries().get(i).address + " " +
-          "Number: "  + cList.getEntries().get(i).number);
+          "Name: "+ eShop.cList.getEntries().get(i).firstName + " " +
+                    eShop.cList.getEntries().get(i).lastName + "\n" +
+          "Address: " + eShop.cList.getEntries().get(i).address + " " +
+          "Number: "  + eShop.cList.getEntries().get(i).number);
     }
-    for(int i=0;i<pList.getEntries().size();i++){
+    for(int i=0;i<eShop.pList.getEntries().size();i++){
       System.out.println(
-          "Name: "  + pList.getEntries().get(i).name + " " +
-          "Prod.: " + pList.getEntries().get(i).producer + ", " +
-          "Price: " + pList.getEntries().get(i).price + "kr");
+          "Name: "  + eShop.pList.getEntries().get(i).name + " " +
+          "Prod.: " + eShop.pList.getEntries().get(i).producer + ", " +
+          "Price: " + eShop.pList.getEntries().get(i).price + "kr");
     }
   }
 }
